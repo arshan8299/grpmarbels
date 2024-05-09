@@ -5,7 +5,7 @@ import { FaRegUser, FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <Box padding={{ xs: "2rem 1rem", md: "2rem 6rem" }} sx={{display:"flex",justifyContent:"space-between", alignItems:"center"}}>
+    <Box padding={{ xs: "2rem 1rem 0rem 1rem", md: "2rem 6rem 0rem 6rem" }} sx={{display:"flex",justifyContent:"space-between", alignItems:"center"}}>
       <Box sx={{ width: "60px", height: "fit-content" }}>
         <img style={{
           width: "100%",
@@ -21,7 +21,7 @@ const Navbar = () => {
             to={item.path}
             style={({ isActive }) => {
               return {
-                color: isActive ? "green" : "#000",
+                color: isActive ? "#015835" : "#f8c301",
                 textDecoration:"none"
               };
             }}
@@ -32,10 +32,10 @@ const Navbar = () => {
       </Box>
       <Box sx={{ display: "flex", gap: "1rem" }}>
             <Box>
-              <FaRegUser size={25} />
+              <FaRegUser color="f8c301" size={25} />
             </Box>
             <Box>
-              <FaShoppingCart size={25} />
+              <FaShoppingCart color="f8c301" size={25} />
             </Box>
           </Box>
     </Box>
