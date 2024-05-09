@@ -4,6 +4,7 @@ import Layout from './components/Layout'
 import { ROUTES } from './constants/routes'
 import Home from './pages/Home'
 import About from './pages/About'
+import VerticalTabs from './pages/Category/VerticalTabs'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
               />
               <Route path={ROUTES.HOME} element={<Home />} />
               <Route path={ROUTES.ABOUTUS} element={<About />} />
+              <Route path="/category" element={<VerticalTabs />} />
             </Route>
           </Routes>
       </BrowserRouter>

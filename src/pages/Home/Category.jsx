@@ -1,4 +1,4 @@
-import { Box,Tabs, } from '@mui/material'
+import { Box,Tabs, Typography, } from '@mui/material'
 import Tab from '@mui/material/Tab';
 import { useState } from 'react';
 import { BENCHES } from '../../constants/product';
@@ -12,6 +12,7 @@ const Category = () => {
     };
     return (
         <Box sx={{display:"flex", flexDirection:"column", alignItems:"center"}}>
+            <Typography fontSize={50} fontWeight={500} marginBlock={2}>Our Categories</Typography>
             <Tabs
                 value={value}
                 onChange={handleChange}
@@ -33,8 +34,8 @@ const Category = () => {
                 <Tab value="temples" label="Temples" />
                 <Tab value="sculptures" label="Sculptures" />
             </Tabs>
-            <CardBox data={BENCHES}/>
-            <CardBox data={BENCHES}/>
+            {value==="benches"&&<CardBox data={BENCHES}/>}
+            {value==="fountain"&&<CardBox data={BENCHES}/>}
         </Box>
     )
 }

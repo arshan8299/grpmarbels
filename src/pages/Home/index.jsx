@@ -1,5 +1,6 @@
 import { Box } from '@mui/material'
 import Category from './Category'
+import Testimonials from '../../components/Testimonials'
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       </Box>
     <Box padding={{ xs: "2rem 1rem", md: "2rem 6rem" }}>
       <Category/>
+      <Testimonials/>
     </Box>
     </>
   )

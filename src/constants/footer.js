@@ -20,7 +20,7 @@ export const SERVICES = [
 ]
 
 export const CONTACT_DETAILS = [
-    {id:"Mail:",value:"test@gmail.com"},
+    {id:"Mail:",value:"grpmarbels@gmail.com"},
     {id:"Phone:",value:"+91-0000000000"},
     {id:"Address:",value:"test test"},
 ]
