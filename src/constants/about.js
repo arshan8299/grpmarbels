@@ -1,4 +1,5 @@
 export const ABOUTUS = "About Us"
+export const ABOUT_DESCRIPTION = "As masters of marble craftsmanship, we have devoted ourselves to the creation of stunning marble carvings, sculptures, temples, and statues from the very beginning. Over the years, we have garnered a multitude of delighted clients, earning recognition for our elaborate designs, flawless artistry, and unwavering commitment to excellence. Our reputation stands as a testament to the enduring quality that defines our work, ensuring each creation embodies the essence of timeless beauty and unparalleled skill."
 export const ABOUT_CONTENT = [
   {
     image: "/our_mission.jpg",
