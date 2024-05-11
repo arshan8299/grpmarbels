@@ -1,17 +1,34 @@
-import { Box } from '@mui/material'
-import Category from './Category'
-import Testimonials from '../../components/Testimonials'
+import { Box, Typography } from "@mui/material"
+import Category from "./Category"
+import Testimonials from "../../components/Testimonials"
+import AdditionalDetails from "./AdditionalDetails"
 
 const Home = () => {
   return (
     <>
-    <Box width="100vw" height="70vh">
-        <img style ={{width:"100%", height:"100%"}}src="/jpeg-optimizer_ai (1).jpg" alt="" />
+      <Box
+        width="100vw"
+        height="80vh"
+        sx={{
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+          justifyContent: "center",
+          padding: "2rem 4rem",
+          backgroundImage: `url("/fountain-trevi-italy-rome.jpg")`,
+          color: "green"
+        }}
+      >
+        <Typography fontSize={60} fontWeight={500}>Welcome to GRP Marbels</Typography>
+        <Typography fontSize={50} fontWeight={500}>Where art meets marbel</Typography>
       </Box>
-    <Box padding={{ xs: "2rem 1rem", md: "2rem 6rem" }}>
-      <Category/>
-      <Testimonials/>
-    </Box>
+
+      <Category />
+      <AdditionalDetails />
+      <Testimonials />
     </>
   )
 }

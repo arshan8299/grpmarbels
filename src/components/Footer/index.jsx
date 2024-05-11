@@ -17,7 +17,7 @@ const Footer = () => {
   return (
     <Box padding={{ xs: "2rem 1rem", md: "2rem 6rem" }} sx={{backgroundColor:"#015835", color:"#fff"}}>
       <Grid container>
-        <Grid xs={12} md={12} sx={{height: "fit-content", display:"flex", gap:{xs:"0", md:"2rem"} , flexDirection:{xs:"column", md:"row"}, marginBottom:"1rem" }}>
+        <Grid item xs={12} md={12} sx={{height: "fit-content", display:"flex", gap:{xs:"0", md:"2rem"} , flexDirection:{xs:"column", md:"row"}, marginBottom:"1rem" }}>
           <img
             style={{
               width: "100px",
@@ -52,7 +52,7 @@ const Footer = () => {
             </Box>
           </Box>
         </Grid>
-        <Grid xs={6} md={3} marginBottom="1rem">
+        <Grid item xs={6} md={3} marginBottom="1rem">
           <Typography fontWeight={500} fontSize={20} marginBottom={2}>
             {INFORMATION}
           </Typography>
@@ -62,7 +62,7 @@ const Footer = () => {
             </Typography>
           ))}
         </Grid>
-        <Grid xs={6} md={3} marginBottom="1rem">
+        <Grid item xs={6} md={3} marginBottom="1rem">
           <Typography fontWeight={500} fontSize={20} marginBottom={2}>
             {INFORMATION}
           </Typography>
@@ -72,7 +72,7 @@ const Footer = () => {
             </Typography>
           ))}
         </Grid>
-        <Grid xs={6} md={3} marginBottom="1rem">
+        <Grid item xs={6} md={3} marginBottom="1rem">
           <Typography fontWeight={500} fontSize={20} marginBottom={2}>
             {INFORMATION}
           </Typography>
@@ -82,7 +82,7 @@ const Footer = () => {
             </Typography>
           ))}
         </Grid>
-        <Grid xs={6} md={3} marginBottom="1rem">
+        <Grid item xs={6} md={3} marginBottom="1rem">
           <Typography fontWeight={500} fontSize={20} marginBottom={2}>
             {CUSTOMER_SERVICES}
           </Typography>
