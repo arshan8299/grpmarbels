@@ -6,7 +6,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 const FAQs = () => {
   return (
     <Box sx={{ paddingInline: { xs: "1rem", md: "12rem" } }} >
-      <Typography textAlign="center" fontSize={30} fontWeight={500} marginBlock="2rem">{FAQ}</Typography>
+      <Typography textAlign="center" fontSize={30} fontWeight={600} marginBlock="2rem">{FAQ}</Typography>
       <Box sx={{ paddingInline: { xs: "0rem", md: "2rem", lg:"12rem" }, marginBottom:"4rem" }}>
         {FAQ_QUESTIONS.map((item, index) => (
           <Accordion key={index} sx={{marginBlock:".5rem"}}>

@@ -10,7 +10,7 @@ import {
   FaFacebookSquare,
   FaTwitterSquare,
   FaInstagram,
-  FaYoutube
+  FaWhatsapp
 } from "react-icons/fa"
 
 const Footer = () => {
@@ -48,7 +48,7 @@ const Footer = () => {
               <FaInstagram size={30} />
             </Box>
             <Box>
-              <FaYoutube size={30} />
+              <FaWhatsapp size={30} />
             </Box>
           </Box>
         </Grid>

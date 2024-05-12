@@ -4,7 +4,7 @@ import { ABOUTUS, ABOUT_CONTENT, ABOUT_DESCRIPTION } from '../../constants/about
 const About = () => {
   return (
     <Box sx={{ display: "flex", flexDirection: "column" }}>
-      <Typography alignSelf="center" marginTop="2rem" fontSize={50} fontWeight={500}>{ABOUTUS}</Typography>
+      <Typography alignSelf="center" marginTop="2rem" fontSize={30} fontWeight={600}>{ABOUTUS}</Typography>
       <Typography textAlign="center" marginBlock="1rem" padding={{xs:"0rem 1rem", md:"0rem 12rem"}} fontSize={17} fontWeight={400}>{ABOUT_DESCRIPTION}</Typography>
       <Box sx={{ padding: { xs: "1rem", md: "2rem 4rem" } }}>
         {ABOUT_CONTENT?.map((item, index) => (

@@ -1,0 +1,2 @@
+export const CONTACT = "Contact Us"
+export const CONTACT_DESCRIPTION = "Get in touch and let us know how we can help. Have a question but aren’t sure who to contact? Get in touch and a member of our team will reach out to you."
