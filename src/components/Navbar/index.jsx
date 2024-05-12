@@ -1,6 +1,6 @@
 import { Box } from "@mui/material"
 import { NAVBAR_ROUTES } from "../../constants/navbar"
-import { NavLink } from "react-router-dom"
+import { NavLink, useLocation } from "react-router-dom"
 import { FaRegUser, FaShoppingCart } from "react-icons/fa"
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx"
 import { useState } from "react"
@@ -10,6 +10,7 @@ const Navbar = () => {
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
+  const location = useLocation()
   return (
     <Box
       padding={{ xs: "1rem 1rem 1rem 1rem", md: "1rem 6rem 1rem 6rem" }}
@@ -17,8 +18,8 @@ const Navbar = () => {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        backgroundColor: "#015835",
-        color:"#fff"
+        color:"#fff",
+        backgroundColor:location.pathname === "/home" ?"":"#016835"
       }}
     >
       <Box sx={{ width: "100px", height: "60px" }}>

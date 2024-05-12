@@ -1,3 +1,5 @@
+export const HOMEPAGE_MAIN_TITLE = "Marble from around the world"
+export const HOMEPAGE_MAIN_DESCRIPTION = "We GRP Marbles are engaged in manufacturing, importing, exporting, wholesaling and retailing a wide range of Marble Slab, Granite Slab, Marble Temples, Fountains, Birdbaths etc. Under the expert super vision of our mentor Mr. Pankaj Vats we have attained as immense position in the industry. "
 export const SHOPBYCATEGORY = "Shop by Category"
 export const ADDITIONALS_DETAILS = [
   {

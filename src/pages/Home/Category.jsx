@@ -29,7 +29,7 @@ const Category = () => {
   // console.log(benches);
   //console.log(benches);
   return (
-    <Container sx={{ display: "flex", flexDirection: "column",padding:{ xs: "2rem 1rem", md: "2rem 2rem" }}}>
+    <Container sx={{ display: "flex", flexDirection: "column",padding:{ xs: "2rem 1rem", md: "2rem 2rem", marginTop:"2rem" }}}>
       <Typography textAlign="center" fontSize={{ xs: 30, md: 50 }} fontWeight={500} marginBlock={2}>{SHOPBYCATEGORY}</Typography>
 
       <Grid container sx={{boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px", padding: "2rem"}}>
