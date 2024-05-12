@@ -1,6 +1,6 @@
 import { Box, Button, CircularProgress, Grid, TextField, Typography } from "@mui/material"
 import { useState } from "react";
-import { CONTACT, CONTACT_DESCRIPTION } from "../../constants/contactUs";
+import { ADDRESS, CONTACT, CONTACT_DESCRIPTION, EMAIL, OPENING_HOURS, PHONE, STAY_CONNECTED, SUBMIT } from "../../constants/contactUs";
 import { FaFacebookSquare, FaInstagram, FaTwitterSquare, FaWhatsapp, } from "react-icons/fa";
 
 
@@ -77,19 +77,19 @@ const ContactUs = () => {
             fullWidth
           />
           <Button sx={{ width: "fit-content", backgroundColor: "#f8c301", color: "#fff", '&:hover': { backgroundColor: "#015835" } }} type="submit">
-            Submit
+            {SUBMIT}
           </Button>
         </form>
       </Grid>
       <Grid xs={12} md={3} sx={{padding:"1rem 1rem", marginTop:{xs:"1rem", md:"3rem", backgroundColor:"#f2f2f2", height:"fit-content"}}}>
-        <Typography fontSize={16} fontWeight={600} marginBlock="1rem">ADDRESS:</Typography>
-        <Typography fontSize={14} fontWeight={400} marginBlock=".2rem">55 Gallaxy Enque, 2568 steet, 23568 NY</Typography>
-        <Typography fontSize={14} fontWeight={400} marginBlock=".2rem">PHONE: +1 (440) 568 4568</Typography>
-        <Typography fontSize={14} fontWeight={400} marginBlock=".2rem">EMAIL: sales@yousite.com</Typography>
-        <Typography fontSize={16} fontWeight={600} marginBlock="1rem">OPENING HOURS</Typography>
-        <Typography fontSize={14} fontWeight={400} marginBlock=".2rem">Mon - Sat : 9am - 11pm</Typography>
-        <Typography fontSize={14} fontWeight={400} marginBlock=".2rem">Sunday: 11am - 5pm</Typography>
-        <Typography fontSize={16} fontWeight={600} marginBlock="1rem">STAY CONNECTED</Typography>
+        <Typography fontSize={16} fontWeight={600} marginBlock="1rem">{ADDRESS}</Typography>
+        <Typography fontSize={14} fontWeight={400} marginBlock=".2rem"></Typography>
+        <Typography fontSize={14} fontWeight={400} marginBlock=".2rem">{PHONE}</Typography>
+        <Typography fontSize={14} fontWeight={400} marginBlock=".2rem">{EMAIL}</Typography>
+        <Typography fontSize={16} fontWeight={600} marginBlock="1rem">{OPENING_HOURS}</Typography>
+        <Typography fontSize={14} fontWeight={400} marginBlock=".2rem"></Typography>
+        <Typography fontSize={14} fontWeight={400} marginBlock=".2rem"></Typography>
+        <Typography fontSize={16} fontWeight={600} marginBlock="1rem">{STAY_CONNECTED}</Typography>
         <Box sx={{ display: "flex", gap: "1rem", marginTop:".2rem" }}>
             <Box>
               <FaFacebookSquare size={25} />

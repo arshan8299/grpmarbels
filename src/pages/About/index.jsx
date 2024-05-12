@@ -5,7 +5,7 @@ const About = () => {
   return (
     <Box sx={{ display: "flex", flexDirection: "column" }}>
       <Typography alignSelf="center" marginTop="2rem" fontSize={30} fontWeight={600}>{ABOUTUS}</Typography>
-      <Typography textAlign="center" marginBlock="1rem" padding={{xs:"0rem 1rem", md:"0rem 12rem"}} fontSize={17} fontWeight={400}>{ABOUT_DESCRIPTION}</Typography>
+      <Typography textAlign="center" marginBlock="1rem" padding={{ xs: "0rem 1rem", md: "0rem 12rem" }} fontSize={17} fontWeight={400}>{ABOUT_DESCRIPTION}</Typography>
       <Box sx={{ padding: { xs: "1rem", md: "2rem 4rem" } }}>
         {ABOUT_CONTENT?.map((item, index) => (
           <Box sx={{ display: "flex", gap: "1.5rem", marginBlock: "3rem", flexDirection: { xs: "column", md: index % 2 === 0 ? "row" : "row-reverse" }, justifyContent: "center" }} key={index}>
