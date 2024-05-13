@@ -4,16 +4,20 @@ import {
   CUSTOMER_SERVICES,
   FOOTER_ROUTES,
   INFORMATION,
+  QUICKSHOP,
   SERVICES,
 } from "../../constants/footer"
+import { CATEGORY } from "../../constants/home"
 import {
   FaFacebookSquare,
   FaTwitterSquare,
   FaInstagram,
   FaWhatsapp
 } from "react-icons/fa"
+import { useNavigate } from "react-router-dom"
 
 const Footer = () => {
+  const navigate = useNavigate()
   return (
     <Box padding={{ xs: "2rem 1rem", md: "2rem 6rem" }} sx={{backgroundColor:"#015835", color:"#fff"}}>
       <Grid container>
@@ -57,8 +61,18 @@ const Footer = () => {
             {INFORMATION}
           </Typography>
           {FOOTER_ROUTES?.map((item, index) => (
-            <Typography fontSize={16} marginTop={0.5} key={index}>
+            <Typography fontSize={16} marginTop={0.8} key={index} sx={{cursor:"pointer"}}>
               {item.title}
+            </Typography>
+          ))}
+        </Grid>
+        <Grid item xs={6} md={3} marginBottom="1rem">
+          <Typography fontWeight={500} fontSize={20} marginBottom={2}>
+            {QUICKSHOP}
+          </Typography>
+          {CATEGORY?.map((item, index) => (
+            <Typography fontSize={16} marginTop={0.8} key={index} sx={{cursor:"pointer"}} onClick={()=>navigate(`/category/${item.id}`)}>
+              {item.categoryTitle}
             </Typography>
           ))}
         </Grid>
@@ -67,17 +81,7 @@ const Footer = () => {
             {INFORMATION}
           </Typography>
           {FOOTER_ROUTES?.map((item, index) => (
-            <Typography fontSize={16} marginTop={0.5} key={index}>
-              {item.title}
-            </Typography>
-          ))}
-        </Grid>
-        <Grid item xs={6} md={3} marginBottom="1rem">
-          <Typography fontWeight={500} fontSize={20} marginBottom={2}>
-            {INFORMATION}
-          </Typography>
-          {FOOTER_ROUTES?.map((item, index) => (
-            <Typography fontSize={16} marginTop={0.5} key={index}>
+            <Typography fontSize={16} marginTop={0.8} key={index} sx={{cursor:"pointer"}}>
               {item.title}
             </Typography>
           ))}
@@ -87,7 +91,7 @@ const Footer = () => {
             {CUSTOMER_SERVICES}
           </Typography>
           {SERVICES?.map((item, index) => (
-            <Typography fontSize={16} marginTop={0.5} key={index}>
+            <Typography fontSize={16} marginTop={0.8} key={index} sx={{cursor:"pointer"}}>
               {item.title}
             </Typography>
           ))}

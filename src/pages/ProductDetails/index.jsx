@@ -5,13 +5,14 @@ import { client, urlFor } from '../../middleware/sanity';
 import ReverseCountdownTimer from './ReverseCountdownTimer';
 import ProductTabs from "./ProductTabs"
 import useScreenSize from '../../hooks/useScreeenSize';
+import { useParams } from 'react-router-dom';
 
 const ProductDetails = () => {
     const screenSize = useScreenSize()
-    const [data, setData] = useState()
+    const params = useParams()
     const endDate = new Date(2024, 5, 13, 10, 0, 0); // Replace with your desired date/time
     const label = 'Offer Ends In:';
-    console.log(data);
+    const [data, setData] = useState()
 
     useEffect(() => {
         async function fetchDocumentById(documentId) {
@@ -23,7 +24,7 @@ const ProductDetails = () => {
                 throw error;
             }
         }
-        const documentId = '010be86e-4a77-459c-8a43-3c99fff07053';
+        const documentId = params?.id ;
         fetchDocumentById(documentId)
             .then((document) => {
                 setData(document);
@@ -31,14 +32,14 @@ const ProductDetails = () => {
             .catch((error) => {
                 console.error('Error fetching document by ID:', error.message);
             });
-    }, [])
+    }, [params?.id])
 
 
     return (
         <Container sx={{ marginBlock: "2rem" }}>
             {data && <Grid container spacing={3}>
                 <Grid item xs={12} md={6}>
-                    {data && <img src={urlFor(data?.productImage[0])?.url()} alt="Product" style={{ maxWidth: '100%', height: 'auto' }} />}
+                    {data && <img src={urlFor(data?.productImage[0])?.url()} alt="Product" style={{ maxWidth: '100%', height: '100%' }} />}
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Typography fontSize={23} fontWeight={600} color="#121212">

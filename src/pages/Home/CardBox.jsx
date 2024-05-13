@@ -1,13 +1,15 @@
 import { Box, Button, Card, CardContent, Typography } from '@mui/material'
 import { urlFor } from '../../middleware/sanity';
+import { useNavigate } from 'react-router-dom';
 
 const CardBox = (data) => {
+    const navigate = useNavigate()
     return (
-        <Box marginTop="2rem" sx={{alignSelf:"center",display: "grid", gridTemplateColumns: {xs:"auto", md:"auto auto auto"}, gap: "2rem", }}>
+        <Box marginTop="2rem" sx={{alignSelf:"center",display: "grid", gridTemplateColumns: {xs:"auto", md:"auto auto auto"}, gap: "2rem" }}>
             {data?.data?.map((item, index) => (
-                <Card sx={{ maxWidth: { xs: "100%", md: 345 }, cursor: "pointer" }} key={index}>
+                <Card sx={{ maxWidth: { xs: "100%", md: 345 }, cursor: "pointer" }} key={index} onClick={()=>navigate(`/product-details/${item?._id}`)}>
                     <Box sx={{ width: "100%", height: "245px" }} >
-                        <img style={{ width: "100%", height: "100%", objectFit: "contain" }} src={urlFor(item?.productImage[0]).url()} alt="logo" />
+                        {item?.productImage[0] &&<img style={{ width: "100%", height: "100%", objectFit: "contain" }} src={urlFor(item?.productImage[0])?.url()} alt="logo" />}
                     </Box>
 
                     <CardContent sx={{display:"flex", flexDirection:"column", alignItems:"center"}}>
@@ -18,7 +20,7 @@ const CardBox = (data) => {
                             {item?.productDescription?.slice(0, 120)}...
                         </Typography>
                         {item?.productVarient[0]?.price && <Typography textAlign="center">₹{item?.productVarient[0]?.price}</Typography>}
-                        <Button alignSelf="center" sx={{ cursor: "pointer", marginTop:"1rem" }}>Buy Now</Button>
+                        <Button sx={{ cursor: "pointer", marginTop:"1rem", alignSelf:"center" }}>Buy Now</Button>
                     </CardContent>
                 </Card>
             ))}

@@ -8,6 +8,7 @@ import ContactUs from './pages/ContactUs'
 import PageNotFound from './pages/PageNotFound'
 import FAQs from './pages/FAQs'
 import ProductDetails from './pages/ProductDetails'
+import Category from './pages/Category'
 
 function App() {
 
@@ -17,11 +18,12 @@ function App() {
         <Routes>
           <Route element={<Layout />}>
             <Route path={ROUTES.HOME} element={<Home />} />
+            <Route path={ROUTES.CATEGORY} element={<Category />} />
             <Route path={ROUTES.ABOUTUS} element={<About />} />
             <Route path={ROUTES.CONTACTUS} element={<ContactUs />} />
             <Route path={ROUTES.FAQS} element={<FAQs />} />
             <Route path={ROUTES.NOTFOUND} element={<PageNotFound />} />
-            <Route path="test" element={<ProductDetails />} />
+            <Route path={ROUTES.PRODUCTDETAILS} element={<ProductDetails />} />
           </Route>
         </Routes>
       </BrowserRouter>

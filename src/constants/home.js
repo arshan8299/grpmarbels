@@ -29,15 +29,15 @@ export const ADDITIONALS_DETAILS = [
 ]
 
 export const CATEGORY = [
-  {categoryImage:"/benches.jpg",categoryTitle:"Benches"},
-  {categoryImage:"/fountain.jpg",categoryTitle:"Fountain"},
-  {categoryImage:"/birdbaths.jpg",categoryTitle:"Birdbaths"},
-  {categoryImage:"/carvings.webp",categoryTitle:"Carvings"},
-  {categoryImage:"/lamps.jpg",categoryTitle:"Lamps"},
-  {categoryImage:"/marbel_handicrafts.webp",categoryTitle:"Marbel Handicrafts"},
-  {categoryImage:"/pillars.webp",categoryTitle:"Pillars"},
-  {categoryImage:"/planters.webp",categoryTitle:"Planters"},
-  {categoryImage:"/statues.jpg",categoryTitle:"Statues"},
-  {categoryImage:"/temples.jpg",categoryTitle:"Temples"},
-  {categoryImage:"/sculptures.jpg",categoryTitle:"Sculptures"},
+  {id:"benches",categoryImage:"/benches.jpg",categoryTitle:"Benches"},
+  {id:"fountain",categoryImage:"/fountain.jpg",categoryTitle:"Fountain"},
+  {id:"birdbaths",categoryImage:"/birdbaths.jpg",categoryTitle:"Birdbaths"},
+  {id:"carvings",categoryImage:"/carvings.webp",categoryTitle:"Carvings"},
+  {id:"lamps",categoryImage:"/lamps.jpg",categoryTitle:"Lamps"},
+  {id:"marbel-handicrafts",categoryImage:"/marbel_handicrafts.webp",categoryTitle:"Marbel Handicrafts"},
+  {id:"pillars",categoryImage:"/pillars.webp",categoryTitle:"Pillars"},
+  {id:"planters",categoryImage:"/planters.webp",categoryTitle:"Planters"},
+  {id:"statues",categoryImage:"/statues.jpg",categoryTitle:"Statues"},
+  {id:"temples",categoryImage:"/temples.jpg",categoryTitle:"Temples"},
+  {id:"sculptures",categoryImage:"/sculptures.jpg",categoryTitle:"Sculptures"},
 ]
