@@ -1,6 +1,6 @@
 import { Box, Button, CircularProgress, Grid, TextField, Typography } from "@mui/material"
 import { useState } from "react";
-import { ADDRESS, CONTACT, CONTACT_DESCRIPTION, EMAIL, OPENING_HOURS, PHONE, STAY_CONNECTED, SUBMIT } from "../../constants/contactUs";
+import { ADDRESS, CONTACT, CONTACT_DESCRIPTION, EMAIL, OPENING_HOURS, OPENING_HOURS_DATA, OPENING_HOURS_DATA2, PHONE, STAY_CONNECTED, SUBMIT } from "../../constants/contactUs";
 import { FaFacebookSquare, FaInstagram, FaTwitterSquare, FaWhatsapp, } from "react-icons/fa";
 
 
@@ -87,8 +87,8 @@ const ContactUs = () => {
         <Typography fontSize={14} fontWeight={400} marginBlock=".2rem">{PHONE}</Typography>
         <Typography fontSize={14} fontWeight={400} marginBlock=".2rem">{EMAIL}</Typography>
         <Typography fontSize={16} fontWeight={600} marginBlock="1rem">{OPENING_HOURS}</Typography>
-        <Typography fontSize={14} fontWeight={400} marginBlock=".2rem"></Typography>
-        <Typography fontSize={14} fontWeight={400} marginBlock=".2rem"></Typography>
+        <Typography fontSize={14} fontWeight={400} marginBlock=".2rem">{OPENING_HOURS_DATA}</Typography>
+        <Typography fontSize={14} fontWeight={400} marginBlock=".2rem">{OPENING_HOURS_DATA2}</Typography>
         <Typography fontSize={16} fontWeight={600} marginBlock="1rem">{STAY_CONNECTED}</Typography>
         <Box sx={{ display: "flex", gap: "1rem", marginTop:".2rem" }}>
             <Box>
