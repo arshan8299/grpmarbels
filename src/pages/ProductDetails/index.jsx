@@ -1,16 +1,18 @@
-import { Box, Button, Container, Grid, MenuItem, Rating, TextField, Typography } from '@mui/material';
+import { Box, Button, Container, Grid, Rating, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
-import { FaShoppingCart } from 'react-icons/fa';
+import { FaShoppingCart, FaWhatsapp } from 'react-icons/fa';
 import { client, urlFor } from '../../middleware/sanity';
+import ReverseCountdownTimer from './ReverseCountdownTimer';
+import ProductTabs from "./ProductTabs"
+import useScreenSize from '../../hooks/useScreeenSize';
 
 const ProductDetails = () => {
-    const [quantity, setQuantity] = useState(1);
+    const screenSize = useScreenSize()
     const [data, setData] = useState()
+    const endDate = new Date(2024, 5, 13, 10, 0, 0); // Replace with your desired date/time
+    const label = 'Offer Ends In:';
     console.log(data);
 
-    const handleQuantityChange = (event) => {
-        setQuantity(event.target.value);
-    };
     useEffect(() => {
         async function fetchDocumentById(documentId) {
             try {
@@ -33,46 +35,44 @@ const ProductDetails = () => {
 
 
     return (
-        <Container sx={{marginBlock:"2rem"}}>
+        <Container sx={{ marginBlock: "2rem" }}>
             {data && <Grid container spacing={3}>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} md={6}>
                     {data && <img src={urlFor(data?.productImage[0])?.url()} alt="Product" style={{ maxWidth: '100%', height: 'auto' }} />}
                 </Grid>
-                <Grid item xs={12} sm={6}>
-                    <Typography variant="h4" gutterBottom>
+                <Grid item xs={12} md={6}>
+                    <Typography fontSize={23} fontWeight={600} color="#121212">
                         {data?.productName}
                     </Typography>
-                    <Typography variant="body1" gutterBottom>
-                        {data?.productDescription}
-                    </Typography>
+                    <Typography fontSize={14} color="#f8c301" marginBlock=".5rem">In Stock</Typography>
+                    <Typography fontSize={20} fontWeight={600} >Rs 999</Typography>
+                    <Typography fontSize={14}>Tax Included</Typography>
+                    <ReverseCountdownTimer endDate={endDate} label={label} />
+                    <Typography fontSize={14} color="#f8c301" sx={{ backgroundColor: "#016835", width: "fit-content", padding: ".4rem", marginBlock: "1rem" }}>Hurry Only 11 left</Typography>
                     <Box display="flex" alignItems="center" mb={2}>
                         <Typography variant="body2">Rating:</Typography>
-                        <Rating value={data?.productRatings} readOnly/>
+                        <Rating value={data?.productRatings} readOnly />
                     </Box>
-                    <Box sx={{display:"flex", flexDirection:"column"}}>
-                        <Typography>Product Specifications</Typography>
-                        <Typography>Specifications:1</Typography>
-                        <Typography>Specifications:2</Typography>
-                        <Typography>Specifications:3</Typography>
+                    <Box display="flex" alignItems="center" gap="2rem">
+                        <Button sx={{ width: "fit-content", backgroundColor: "#f8c301", color: "#fff", '&:hover': { backgroundColor: "#015835" }, padding: ".5rem 1rem" }} startIcon={<FaShoppingCart />}>
+                            Add to Cart
+                        </Button>
+                        <Button sx={{ width: "fit-content", backgroundColor: "#016835", color: "#fff", '&:hover': { backgroundColor: "#f8c301" }, padding: ".5rem 1rem" }} startIcon={<FaWhatsapp />}>
+                            Inquiry
+                        </Button>
                     </Box>
-                    <TextField
-                        select
-                        label="Quantity"
-                        value={quantity}
-                        onChange={handleQuantityChange}
-                        variant="outlined"
-                        fullWidth
-                        margin="normal"
-                    >
-                        {[...Array(10).keys()].map((value) => (
-                            <MenuItem key={value + 1} value={value + 1}>
-                                {value + 1}
-                            </MenuItem>
-                        ))}
-                    </TextField>
-                    <Button variant="contained" color="primary" startIcon={<FaShoppingCart />} fullWidth>
-                        Add to Cart
-                    </Button>
+                    <Box display="flex" flexDirection={{ xs: "column", md: "row" }} marginBlock="1rem">
+                        <Typography fontSize={16} fontWeight={400}>Expected Delivery on</Typography>
+                        <Typography fontSize={16} fontWeight={600}>Thursday 16 May - Wednesday 22 May.</Typography>
+                    </Box>
+                    <Box sx={{ padding: "1rem", backgroundColor: "#f5f5f5" }}>
+                        <Typography textAlign="center" fontSize={18} fontWeight={600} color="#121212" marginBlock="1rem">GUARANTEED SAFE CHECKOUT</Typography>
+                        <img style={{ width: "100%", height: "100%", objectFit: "contain" }} src="/payment_paartners.jpg" alt="payment" />
+                    </Box>
+
+                </Grid>
+                <Grid item xs={12}>
+                    {screenSize.width > 900 && <ProductTabs />}
                 </Grid>
             </Grid>}
         </Container>

@@ -19,7 +19,7 @@ const Navbar = () => {
         justifyContent: "space-between",
         alignItems: "center",
         color:"#fff",
-        backgroundColor:location.pathname === "/home" ?"":"#016835"
+        backgroundColor:location.pathname === "/" ?"":"#016835"
       }}
     >
       <Box sx={{ width: "100px", height: "60px" }}>
